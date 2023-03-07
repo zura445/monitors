@@ -7,9 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      //ბაქგრაუნდ სურათი
       backgroundImage: {
-        'hero-pattern': "url('/img/hero-pattern.svg')",
-        'footer-texture': "url('/img/footer-texture.png')",
+        'hero-pattern': "url('/image/bg-photo.jpg')",
       }
     },
   },
