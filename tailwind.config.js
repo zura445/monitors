@@ -13,5 +13,21 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+
+  screens: {
+    mobile: '320px',
+
+    // => @media (min-width: 480px) { ... }
+    tablet: '480px',
+
+    // => @media (min-width: 1024px) { ... }
+    desktop: '1024px',
+
+    // => @media (min-width: 640px) { ... }
+    laptop: '1200px',
+
+    
+
+    // => @media (min-width: 1280px) { ... }
+  }
 }
