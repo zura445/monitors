@@ -1,33 +1,57 @@
 import Typography from "../../views/components/typography";
-import { HomeDiv, Contact } from "../../styles/styles";
+import { HomeDiv } from "../../styles/styles";
 import BurgerMenu from "../../pages/burgerMenu";
-import { Dropdown } from "@nextui-org/react";
-import { useRouter } from 'next/router'
-
+// import { Dropdown } from "@nextui-org/react";
+import { useRouter } from "next/router";
+// import { Link, Spacer } from "@nextui-org/react";
 const Header = () => {
-// push - ში უნდა ჩავწერო ლინკი სადაც გადავა დროპდაუნზე დაჭერის დროს
-  const router = useRouter()
+  // push - ში უნდა ჩავწერო ლინკი სადაც გადავა დროპდაუნზე დაჭერის დროს
+  const router = useRouter();
 
-  const handleClick = (e: any) => {
-    e.preventDefault()
-    router.push('/')
-  }
+  const prodactPage = (e: any) => {
+    e.preventDefault();
+    router.push("prodactPage");
+  };
 
-//ჩაშენებული ბიბლიოთეკა რომელიც აკეთებს დროპდაუნს
+  const aboutUs = (e: any) => {
+    e.preventDefault();
+    router.push("aboutUs");
+  };
+
+  const contactFunc = (e: any) => {
+    e.preventDefault();
+    router.push("contactPage");
+  };
+
+  //ჩაშენებული ბიბლიოთეკა რომელიც აკეთებს დროპდაუნს
   return (
-    <HomeDiv className=" pl-20 bg-current py-2 w-full flex justify-around w-full">
+    <HomeDiv className="py-2 w-full flex justify-around">
       <img
         src="image/logo.jpg"
         className="w-10 h-10 rounded-full object-cover"
         alt=""
       />
+      
+      
+    <button onClick={prodactPage} className="font-bold">პროდუქტი</button>
+    <button onClick={aboutUs} className="font-bold">ჩვენს შესახებ</button>
+    <button onClick={contactFunc} className="font-bold">კონტაქტი</button>
 
-      <Dropdown>
+
+
+
+    {/* ეს არის დროპდაუნის მენიუ */}
+      {/* <Dropdown>
         <Dropdown.Button flat color="secondary">
-          Product & Solution
+            Product & Solution
         </Dropdown.Button>
         <Dropdown.Menu color="secondary" aria-label="Actions">
-          <Dropdown.Item>New file</Dropdown.Item>
+          <Dropdown.Item>
+            <Link href="#" isExternal>
+              New file
+            </Link>
+          </Dropdown.Item>
+
           <Dropdown.Item>Copy link</Dropdown.Item>
           <Dropdown.Item>Edit file</Dropdown.Item>
         </Dropdown.Menu>
@@ -81,7 +105,7 @@ const Header = () => {
         <Dropdown.Menu color="secondary" aria-label="Actions">
           <Dropdown.Item>Dowloads</Dropdown.Item>
         </Dropdown.Menu>
-      </Dropdown>
+      </Dropdown> */}
 
       <BurgerMenu />
     </HomeDiv>

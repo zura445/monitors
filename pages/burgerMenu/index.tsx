@@ -4,6 +4,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 export default function BurgerMenu() {
   return (
+    //ესეც არის დროპდაუნის მენიუ (ბიბლიოთეკა) რომელსაც კიდევ ვიყენებ homepage - ის ინდექსში
     <div className="top-16 w-56 text-right min-[740px]:hidden">
       <Menu as="div" className="relative inline-block text-left">
         <div>
